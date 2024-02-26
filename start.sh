@@ -14,6 +14,11 @@ if [ -z "$name"]; then
 	exit 1
 fi
 
+if [[ ! "$name" =~ ^[a-zA-ZÀ-ú\s]+$ ]]; then
+	echo "Name must contain only alphabetic characters."
+	exit 1
+fi
+
 read -p "Insert your age: " age
 
 if [ -z "$age"]; then
