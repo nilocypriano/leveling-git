@@ -1,4 +1,14 @@
 #!/bin/bash
+error_log() {
+	echo "$date '%Y-%m-%d %H:%M:%S') - $1" >> "$log_file"
+}
+
+if [ ! -d "logs"]; then
+	mkdir logs 
+fi
+
+log_file = "logs/log.txt"
+touch "$log_file"
 
 echo "Welcome!"
 
