@@ -9,6 +9,11 @@ if [${#name} -lt 2]; then
 	exit 1
 fi
 
+if [ -z "$name"]; then
+	echo "Name can't be empty."
+	exit 1
+fi
+
 read -p "Insert your age: " age
 
 if [ -z "$age"]; then
